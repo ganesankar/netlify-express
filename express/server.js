@@ -11,9 +11,9 @@ app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
 app.set('views', __dirname + '/../ui');
-app.use('/login', require('./login/'));
+app.use('/login', require('./login.js'));
 
-app.use('/', require('./web/'));
+app.use('/', require('./web.js'));
 //app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 module.exports = app;
